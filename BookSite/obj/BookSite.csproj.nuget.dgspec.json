@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dhanoreG\\Source\\Repos\\dotnetcore_app\\BookSite\\BookSite.csproj": {}
+    "C:\\Users\\dhanoreG\\source\\repos\\dotnetcore_app\\BookSite\\BookSite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dhanoreG\\Source\\Repos\\dotnetcore_app\\BookSite\\BookSite.csproj": {
+    "C:\\Users\\dhanoreG\\source\\repos\\dotnetcore_app\\BookSite\\BookSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dhanoreG\\Source\\Repos\\dotnetcore_app\\BookSite\\BookSite.csproj",
+        "projectUniqueName": "C:\\Users\\dhanoreG\\source\\repos\\dotnetcore_app\\BookSite\\BookSite.csproj",
         "projectName": "BookSite",
-        "projectPath": "C:\\Users\\dhanoreG\\Source\\Repos\\dotnetcore_app\\BookSite\\BookSite.csproj",
+        "projectPath": "C:\\Users\\dhanoreG\\source\\repos\\dotnetcore_app\\BookSite\\BookSite.csproj",
         "packagesPath": "C:\\Users\\dhanoreG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dhanoreG\\Source\\Repos\\dotnetcore_app\\BookSite\\obj\\",
+        "outputPath": "C:\\Users\\dhanoreG\\source\\repos\\dotnetcore_app\\BookSite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dhanoreG\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,6 +38,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
