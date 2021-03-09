@@ -1,21 +1,58 @@
-﻿using BookSite.Models;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Net;
+//using System.Net.Http;
+//using System.Threading.Tasks;
+//using System.Web.Http.Filters;
+//using Microsoft.AspNetCore.Mvc.Filters;
+
 using System;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http.Filters;
 
 namespace BookSite.Filters
 {
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
-    public class AuthorizeAttribute : Attribute, IAuthorizationFilter
+    //
+    //using System;
+    //using System.Collections.Generic;
+    //using System.Linq;
+    //using System.Net;
+    //using System.Net.Http;
+    //using System.Web;
+    //using System.Web.Http.Filters;
+
+    namespace galaxyGeoloc.Filters
     {
-        public void OnAuthorization(AuthorizationFilterContext context)
+        public class CustomExceptionFilter : ExceptionFilterAttribute
         {
-            var user = (User)context.HttpContext.Items["User"];
-            if (user == null)
+            public override void OnException(HttpActionExecutedContext actionExecutedContext)
             {
-                // not logged in
-                context.Result = new JsonResult(new { message = "Unauthorized" }) { StatusCode = StatusCodes.Status401Unauthorized };
+                HttpStatusCode status = HttpStatusCode.InternalServerError;
+                String message = String.Empty;
+                var exceptionType = actionExecutedContext.Exception.GetType();
+                if (exceptionType == typeof(UnauthorizedAccessException))
+                {
+                    message = "Access to the Web API is not authorized.";
+                    status = HttpStatusCode.Unauthorized;
+                }
+                else if (exceptionType == typeof(DivideByZeroException))
+                {
+                    message = "Internal Server Error.";
+                    status = HttpStatusCode.InternalServerError;
+                }
+                else
+                {
+                    message = "Not found.";
+                    status = HttpStatusCode.NotFound;
+                }
+                actionExecutedContext.Response = new HttpResponseMessage()
+                {
+                    Content = new StringContent(message, System.Text.Encoding.UTF8, "text/plain"),
+                    StatusCode = status
+                };
+                base.OnException(actionExecutedContext);
             }
         }
     }

@@ -24,7 +24,7 @@ namespace BookSite.Controllers
         }
 
         private bool BookExists(long id) =>
-     _context.Books.Any(e => e.Id == id);
+                _context.Books.Any(e => e.Id == id);
 
         private static BookDto ItemToDTO(Book Book) =>
             new BookDto

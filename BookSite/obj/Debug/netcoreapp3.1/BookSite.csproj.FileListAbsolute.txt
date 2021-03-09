@@ -31,8 +31,6 @@ C:\Users\dhanoreG\source\repos\dotnetcore_app\BookSite\bin\Debug\netcoreapp3.1\S
 C:\Users\dhanoreG\source\repos\dotnetcore_app\BookSite\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Users\dhanoreG\source\repos\dotnetcore_app\BookSite\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\dhanoreG\source\repos\dotnetcore_app\BookSite\obj\Debug\netcoreapp3.1\BookSite.csproj.CopyComplete
-C:\Users\dhanoreG\source\repos\dotnetcore_app\BookSite\obj\Debug\netcoreapp3.1\BookSite.csproj.CoreCompileInputs.cache
-C:\Users\dhanoreG\source\repos\dotnetcore_app\BookSite\obj\Debug\netcoreapp3.1\BookSite.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\dhanoreG\source\repos\dotnetcore_app\BookSite\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\dhanoreG\source\repos\dotnetcore_app\BookSite\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 C:\Users\dhanoreG\source\repos\dotnetcore_app\BookSite\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
